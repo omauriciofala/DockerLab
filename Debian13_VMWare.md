@@ -53,8 +53,6 @@ sudo apt update && sudo apt full-upgrade -y
 sudo reboot
 ```
 
----
-
 ### 1.3 Instalar pacotes essenciais
 
 ```bash
@@ -88,16 +86,12 @@ root hard nofile 1048576
 EOF
 ```
 
----
-
 ### 1.5 Instalar VMware Tools
 
 ```bash
 sudo apt install -y open-vm-tools
 sudo systemctl enable --now open-vm-tools
 ```
-
----
 
 ## Etapa 2 — Instalação do Docker Engine (oficial)
 
@@ -107,7 +101,6 @@ sudo systemctl enable --now open-vm-tools
 sudo apt remove -y docker docker-engine docker.io containerd runc
 ```
 
----
 
 ### 2.2 Adicionar chave e repositório oficial
 
@@ -134,7 +127,6 @@ sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt update
 ```
 
----
 
 ### 2.3 Instalar Docker
 
@@ -151,7 +143,6 @@ sudo apt install -y \
 sudo systemctl enable --now docker
 ```
 
----
 
 ### 2.4 Permitir uso sem sudo
 
@@ -164,7 +155,6 @@ newgrp docker
 docker run hello-world
 ```
 
----
 
 ### 2.5 Ajustar daemon do Docker
 
@@ -189,7 +179,6 @@ EOF
 sudo systemctl restart docker
 ```
 
----
 
 ## Etapa 3 — Organização e limpeza
 
@@ -204,7 +193,6 @@ sudo chown -R mol:mol /srv/docker
 mkdir -p ~/projects ~/scripts
 ```
 
----
 
 ### 3.2 Otimizar escrita em disco
 
@@ -212,7 +200,6 @@ mkdir -p ~/projects ~/scripts
 sudo sed -i 's/errors=remount-ro/errors=remount-ro,noatime/' /etc/fstab
 ```
 
----
 
 ### 3.3 Limpeza do sistema
 
@@ -222,7 +209,6 @@ sudo apt autoclean -y
 sudo journalctl --vacuum-time=7d
 ```
 
----
 
 ### 3.4 Atalhos úteis
 
@@ -241,7 +227,6 @@ EOF
 source ~/.bashrc
 ```
 
----
 
 ## Conclusão
 
