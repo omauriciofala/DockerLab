@@ -9,8 +9,6 @@ Neste tutorial, você vai aprender a preparar uma **máquina virtual com Debian 
 
 Ao final, você terá um ambiente replicável, previsível e pronto para evoluir.
 
----
-
 ## Etapa 1 — Ajustes iniciais, preparação e desempenho da VM
 
 Nesta etapa, preparamos o sistema operacional para uso diário, evitando o uso direto do usuário `root` e aplicando ajustes importantes para ambientes virtualizados.
